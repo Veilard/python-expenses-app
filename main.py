@@ -115,10 +115,10 @@ if __name__ == '__main__':
     view_category_parser.add_argument("--category", required=True)
     
     #Сабпарсер для просмотра всей базы данных
-    view_all_expenses_parser = subparsers.add_parser("view_all_expenses")
+    view_all_expenses_parser = subparsers.add_parser("view_all_expenses" ,help='Просмотр всех записей в базе данных')
 
     #Сабпарсер для суммы всех расходов в заданный период
-    view_sum_by_date_parser = subparsers.add_parser("view_sum_by_date")
+    view_sum_by_date_parser = subparsers.add_parser("view_sum_by_date", help='Просмотр суммы всех расходов за указанный период')
     view_sum_by_date_parser.add_argument("--start_date", required=True)
     view_sum_by_date_parser.add_argument("--end_date", required=True)
     
